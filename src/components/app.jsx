@@ -114,7 +114,7 @@ const App = () => {
           <span className="pp-span"></span>
 
           <p className="controls-message" id="message">
-            {message} <b>Comenzar a Jugar</b>
+            {message} <strong>Comenzar a Jugar</strong>
           </p>
         </p>
         <div className="controls">
@@ -182,8 +182,8 @@ const App = () => {
             },
           ]}
           layout={{
-            paper_bgcolor: "#252525",
-            plot_bgcolor: "#202020",
+            paper_bgcolor: "#191724",
+            plot_bgcolor: "#1b1a2cff",
             font: { color: "white" },
             xaxis: {
               range: [-10, 10],

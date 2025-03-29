@@ -161,7 +161,7 @@
 .controls-button-level {
   margin: 0.5rem;
   padding: 0.5rem;
-  background-color: #2b2846;
+  background-color: #161616;
   color: #d2dbdd;
   border-radius: 0.5rem;
   border: #4e4e4b solid 1px;
@@ -181,7 +181,7 @@
 }
 
 .controls-button:hover {
-  background-color: #160921;
+  background-color: #171133;
 }
 
 .controls-message {
@@ -219,13 +219,13 @@
 }
 
 .div-button:hover {
-  background-color: #212926;
+  background-color: #170132;
 }
 
 ::-webkit-scrollbar {
   width: 0.8rem;
   height: 0.8rem;
-  background-color: #464242;
+  background-color: #170132;
   overflow-y: scroll;
   scrollbar-color: #663399 #008000;
 }
