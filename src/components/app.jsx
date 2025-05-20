@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Plot from "react-plotly.js";
-import Favicon from "../assets/react.svg";
+import Favicon from "/icons.png";
+import Logotipo from "../assets/logotipo.svg";
 import "../styles/app.css";
 
 const functions = [
@@ -98,7 +99,9 @@ const App = () => {
   return (
     <div className="container">
       <div className="container-header">
-        <h1 className="header-title">Pages-Functions</h1>
+        <h1 className="header-title" id="h1-id">
+          Pages-Functions
+        </h1>
         <img
           className="header-img"
           src={Favicon}
@@ -106,10 +109,67 @@ const App = () => {
           alt="favicon-pages-functions"
         ></img>
       </div>
-      <div className="h2-div">
-        <h2 className="container-h2">{label}</h2>
+      <div className="container-level">
+        <p className="container-p">
+          <span className="pp-span"></span>
+
+          <p className="controls-message" id="message">
+            {message} <b>Comenzar a Jugar</b>
+          </p>
+        </p>
+        <div className="controls">
+          <div className="controls-div">
+            <p className="container-p">
+              <span className="p-span"></span>
+            </p>
+            <input
+              className="controls-input"
+              type="text"
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              placeholder="Ingresar La Función..."
+            />
+            <button
+              className="controls-button"
+              id="verifyBtn"
+              onClick={verifyAnswer}
+            >
+              Verificar Respuesta
+            </button>
+          </div>
+          <div className="container-div">
+            <button
+              className="div-button"
+              id="prevBtn"
+              onClick={() => updateLevel(currentLevel - 1)}
+              disabled={currentLevel === 0}
+            >
+              Anterior Nivel
+            </button>
+            <button
+              className="div-button"
+              id="nextBtn"
+              onClick={() => updateLevel(currentLevel + 1)}
+              disabled={!isCorrect || currentLevel === functions.length - 1}
+            >
+              Siguiente Nivel
+            </button>
+          </div>
+        </div>
+        <button className="controls-button-level" onClick={toggleHint}>
+          {showHint ? "Ocultar Pista" : "Mostrar Pista"}
+        </button>
+        {showHint && (
+          <p className="container-p">
+            <span className="p-span">Pista - </span>
+            {hint}
+          </p>
+        )}
       </div>
       <center className="container-plot">
+        <div className="h2-div">
+          <h2 className="container-h2">{label}</h2>
+        </div>
         <Plot
           className="plot"
           data={[
@@ -143,64 +203,21 @@ const App = () => {
           }}
         />
       </center>
-      <div className="container-level">
-        <p className="controls-message" id="message">
-          {message} 🏆
-        </p>
-        <p className="container-p">
-          <span className="pp-span">Soluciones</span>
-        </p>
-        <button className="controls-button-level" onClick={toggleHint}>
-          {showHint ? "Ocultar Pista" : "Mostrar Pista"}
-        </button>
-        {showHint && (
-          <p className="container-p">
-            <span className="p-span">Pista - </span>
-            {hint}
-          </p>
-        )}
-      <div className="controls">
-        <div className="controls-div">
-          <p className="container-p">
-            <span className="p-span">Funciones</span>
-          </p>
-          <input
-            className="controls-input"
-            type="text"
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Ingresar La Función..."
-          />
-          <br />
-          </div>
-        <div className="container-div">
-          <button
-            className="div-button"
-            id="prevBtn"
-            onClick={() => updateLevel(currentLevel - 1)}
-            disabled={currentLevel === 0}
-          >
-            Anterior Nivel
-          </button>
-          <button
-            className="controls-button"
-            id="verifyBtn"
-            onClick={verifyAnswer}
-          >
-            Verificar Respuesta
-          </button>
-          <button
-            className="div-button"
-            id="nextBtn"
-            onClick={() => updateLevel(currentLevel + 1)}
-            disabled={!isCorrect || currentLevel === functions.length - 1}
-          >
-            Siguiente Nivel
-          </button>
-        </div>
-      </div>
+      <footer id="footer">
+        <br />
+        <span id="footer-span">
+          <strong>©2024</strong> -{" "}
+          <small>
+            <strong>JeanCarlos Jimenez</strong>
+          </small>{" "}
+          - <small>@jeanctech</small> -{" "}
+          <strong>Todos los derechos reservados.</strong>
+        </span>
+        <br />
+        <img src={Logotipo} id="footer-img" alt="Logotipo-Jc" width={55} />
+        <br />
+      </footer>
     </div>
-  </div>
   );
 };
 
