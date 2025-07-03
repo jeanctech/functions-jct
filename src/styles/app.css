@@ -41,10 +41,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
 }
 
 .h2-div {
@@ -61,15 +57,14 @@
   background-color: #191724;
   border-radius: 0.5rem;
   border: #4e4e4b solid 1px;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
 }
 
 .plot {
   margin: 0rem;
   padding: 0rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #663399 #1a1a2e;
   width: 700px;
   height: 500px;
   max-width: 900px;
@@ -222,12 +217,31 @@
   background-color: #170132;
 }
 
+/* Scrollbar para navegadores basados en WebKit */
 ::-webkit-scrollbar {
-  width: 0.8rem;
-  height: 0.8rem;
-  background-color: #170132;
-  overflow-y: scroll;
-  scrollbar-color: #663399 #008000;
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e; /* fondo del scroll */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #663399; /* color del thumb */
+  border-radius: 10px;
+  border: 2px solid #1a1a2e; /* da un efecto de espacio */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9157d1;
+}
+
+/* Scrollbar para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #663399 #1a1a2e;
 }
 
 #footer {
@@ -248,10 +262,6 @@
   margin: 0.1rem;
   padding: 0.1rem;
   border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
 }
 
 #footer-span {
