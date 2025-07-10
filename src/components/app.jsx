@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Plot from "react-plotly.js";
-import Favicon from "/icons.png";
-import Logotipo from "../assets/logotipo.svg";
+import Favicon from "/favicon.svg";
+import Logo from "../assets/logo.svg";
 import "../styles/app.css";
 
 const functions = [
@@ -214,7 +214,7 @@ const App = () => {
           <strong>Todos los derechos reservados.</strong>
         </span>
         <br />
-        <img src={Logotipo} id="footer-img" alt="Logotipo-Jc" width={55} />
+        <img src={Logo} id="footer-img" alt="Logo-Jc" width={55} />
         <br />
       </footer>
     </div>

@@ -28,7 +28,9 @@
     "vite": "^5.0.8"
   },
   "trustedDependencies": [
-    "es5-ext"
+    "@swc/core",
+    "es5-ext",
+    "esbuild"
   ],
   "pnpm": {
     "onlyBuiltDependencies": [
