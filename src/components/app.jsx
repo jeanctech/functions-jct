@@ -100,7 +100,7 @@ const App = () => {
     <div className="container">
       <div className="container-header">
         <h1 className="header-title" id="h1-id">
-          Pages-Functions
+          Functions-JcT
         </h1>
         <img
           className="header-img"
