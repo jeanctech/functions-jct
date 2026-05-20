@@ -206,7 +206,7 @@ const App = () => {
       <footer id="footer">
         <br />
         <span id="footer-span">
-          <strong>©2024</strong> -{" "}
+          <strong>©2026</strong> -{" "}
           <small>
             <strong>JeanCarlos Jimenez</strong>
           </small>{" "}
