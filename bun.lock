@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "pages-jct",
+      "name": "functions-jct",
       "dependencies": {
         "mumath": "^3.3.4",
         "plotly.js": "^2.34.0",

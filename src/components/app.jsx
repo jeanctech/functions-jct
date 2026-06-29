@@ -100,7 +100,7 @@ const App = () => {
     <div className="container">
       <div className="container-header">
         <h1 className="header-title" id="h1-id">
-          Functions-JcT
+          Functions-Jct
         </h1>
         <img
           className="header-img"
@@ -206,7 +206,7 @@ const App = () => {
       <footer id="footer">
         <br />
         <span id="footer-span">
-          <strong>©2026</strong> -{" "}
+          <strong>©2024</strong> -{" "}
           <small>
             <strong>JeanCarlos Jimenez</strong>
           </small>{" "}

@@ -1,4 +1,4 @@
-# > functions-jct 🚀
+# > Functions-Jct 🚀
 
 > Learn Functions as if you were in the WEB.
 > No frameworks, no black magic — just pure code.
@@ -36,4 +36,4 @@ That motivates me more than a cup of coffee ☕✨
 
 **Author:** `jeanctech`,
 **Style:** `web vibes`, functional documentation, no fear of code.
-**year:** '2026'
+**year:** '2024'
